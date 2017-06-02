@@ -30,6 +30,9 @@
       "add": "Add bed",
       "edit" : "Edit bed",
       "preview": "Preview"
+    },
+    "regiobed" : {
+      "title" : "Beds in the area"
     }
   }
 }
