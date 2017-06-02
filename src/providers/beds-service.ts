@@ -17,7 +17,10 @@ export class BedsService {
 
     this.cfg = AppConfig.cfg;
     this.nextid = 207;
-    this.beds = {};
+    this.beds = [ // even wat eerste data
+           {title: "Bed nummer 1", bed_location: "KC2.01", beds_in_room:"4"},
+           {title: "Bed nummer 2", bed_location: "KC2.02", beds_in_room:"4"}
+         ];
   }
 
   getAll() {
