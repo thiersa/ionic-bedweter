@@ -2,12 +2,14 @@ import {NavController, NavParams} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 
 export class ProtectedPage {
+  private affiliation: number;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public storage: Storage) {
-  }
+
+    this.affiliation = 1207;  }
 
   ionViewCanEnter() {
 
@@ -20,5 +22,9 @@ export class ProtectedPage {
     });
 
     return true;
+  }
+
+  getAffiliation() {
+    return this.affiliation;
   }
 }

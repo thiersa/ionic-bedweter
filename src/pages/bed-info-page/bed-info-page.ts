@@ -32,7 +32,7 @@ export class BedInfoPage extends ProtectedPage {
   }
 
   deleteBed(bed: BedModel) {
-    this.bedsService.remove(bed.id);
+    this.bedsService.remove(this.getAffiliation(), bed.id);
     this.navCtrl.pop();
     /* this.bedsService.remove(bed.id)
       .then(() => this.navCtrl.pop())

@@ -26,7 +26,7 @@ export class BedsPage extends ProtectedPage {
   }
 
   ionViewWillEnter() {
-    this.beds = this.bedsService.getAll();
+    this.beds = this.bedsService.getBeds(this.getAffiliation());
     // this.bedsService.getAll().then(beds => this.beds = beds);
   }
 
