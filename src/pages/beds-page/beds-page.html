@@ -4,7 +4,7 @@
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>    
+    </button>
     <ion-title>{{ 'page.beds.list' | translate }}</ion-title>
   </ion-navbar>
 
@@ -14,9 +14,15 @@
 <ion-content padding>
 
   <button ion-button block (click)="openPage('BedAddPage')">{{ 'button.add_bed' | translate }}</button>
-  
+
   <ion-list *ngIf="beds">
-    <button ion-item  *ngFor="let bed of beds" (click)="bedInfo(bed)">{{ bed.title }}</button>
+    <ion-item  *ngFor="let bed of beds" (click)="bedInfo(bed)">
+      <ion-label>{{bed.title}}</ion-label>
+      <div class="item-note" item-right>
+        {{bed.bed_location}}
+      </div>
+      <button>more info </button>
+    </ion-item>
   </ion-list>
-  
+
 </ion-content>
